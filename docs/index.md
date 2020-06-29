@@ -36,8 +36,6 @@ Zu den deutschsprachigen Korpora, die über öffentliche ANNIS-Instanzen verfüg
 
 In diesem Tutorial arbeiten wir mit dem RIDGES-Korpus, das, wie viele andere Korpora auch, über [https://korpling.german.hu-berlin.de/annis3/](https://korpling.german.hu-berlin.de/annis3/) verfügbar ist.
 
-<img src="docs/fig/by-sa.png" width="30%" height="30%" style="display: block; margin: auto;" />
-
 Für alle, die lieber schauen statt lesen, gibt eine auch eine Video-Version des Tutorials (die minimal anders ist und außerdem mein allererstes Video, deshalb teilweise etwas holprig). Um es zu sehen, klappen Sie einfach durch Klick auf den Pfeil den entsprechenden Abschnitt aus:
 
 <details>
@@ -47,5 +45,7 @@ Für alle, die lieber schauen statt lesen, gibt eine auch eine Video-Version des
 
 </details>
 
+
+<img src="docs/fig/by-sa.png" width="20%" height="20%" style="display: block; margin: auto;" />
 
 Dieses Tutorial wurde mit Hilfe von <a href="https://bookdown.org/" target="_blank">Bookdown</a> für <a href="https://www.r-project.org/" target="_blank">R</a> geschrieben und publiziert. Es ist lizenziert unter CC-BY-SA und kann gerne mit Quellenangabe weitergegeben und adaptiert werden.
