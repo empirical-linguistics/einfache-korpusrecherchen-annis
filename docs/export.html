@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Export | Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg</title>
+  <meta name="description" content="3 Export | Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Export | Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Export | Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg" />
+  
+  
+  
+
+<meta name="author" content="Stefan Hartmann" />
+
+
+<meta name="date" content="2020-06-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="annis-interface-und-suchabfragesprache.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Einführung</a></li>
+<li class="chapter" data-level="2" data-path="annis-interface-und-suchabfragesprache.html"><a href="annis-interface-und-suchabfragesprache.html"><i class="fa fa-check"></i><b>2</b> ANNIS: Interface und Suchabfragesprache</a><ul>
+<li class="chapter" data-level="2.1" data-path="annis-interface-und-suchabfragesprache.html"><a href="annis-interface-und-suchabfragesprache.html#annis-interface"><i class="fa fa-check"></i><b>2.1</b> ANNIS-Interface</a></li>
+<li class="chapter" data-level="2.2" data-path="annis-interface-und-suchabfragesprache.html"><a href="annis-interface-und-suchabfragesprache.html#suchabfragesprache"><i class="fa fa-check"></i><b>2.2</b> Suchabfragesprache</a></li>
+<li class="chapter" data-level="2.3" data-path="annis-interface-und-suchabfragesprache.html"><a href="annis-interface-und-suchabfragesprache.html#beispiel-diminutive-in-ridges"><i class="fa fa-check"></i><b>2.3</b> Beispiel: Diminutive in RIDGES</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="export.html"><a href="export.html"><i class="fa fa-check"></i><b>3</b> Export</a><ul>
+<li class="chapter" data-level="3.1" data-path="export.html"><a href="export.html#export-mit-csv--und-grid-exporter"><i class="fa fa-check"></i><b>3.1</b> Export mit CSV- und Grid-Exporter</a></li>
+<li class="chapter" data-level="3.2" data-path="export.html"><a href="export.html#keyword-hervorheben-mit-einem-excel-makro"><i class="fa fa-check"></i><b>3.2</b> Keyword hervorheben mit einem Excel-Makro</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="export" class="section level1">
+<h1><span class="header-section-number">3</span> Export</h1>
+<p>Obwohl ANNIS eine ganze Reihe von Exportern bietet, ist der Export von Konkordanzen einer der problematischsten Aspekte bei diesem Tool. Das liegt daran, dass ANNIS tatsächlich eher als Such- und Visualisierungstool gedacht ist. Dahinter steht der Gedanke, dass Annotationen jeglicher Art im Idealfall am besten über spezifische Annotationstools im Korpus selbst vorgenommen werden sollten. De facto ist es aber so, dass es gerade in der Lehre und oft auch bei kleineren Fallstudien in der Forschung praktikabler ist, mit sog. Konkordanzen zu arbeiten, also mit Belegsammlungen, die das jeweilige Keyword im Kontext anzeigen. Deshalb spricht man hier auch von KWIC-Konkordanzen (für “Key Word In Context”).</p>
+<p>In der aktuellen Version von ANNIS gibt es mit dem TextColumnExporter einen Exporter, der genau solche KWIC-Konkordanzen exportiert. Er hat jedoch drei Nachteile:</p>
+<ul>
+<li>Er exportiert Metadaten (wie Dokument, Jahr usw.) nicht bzw. nur sehr unzuverlässig.</li>
+<li>Er funktioniert - ganz vereinfacht gesagt - nur, wenn eine ganz bestimmte (Default-)Ebene genutzt wird, die aber bei manchen Korpora bewusst leer gelassen wird. Das ist bspw. beim Referenzkorpus Mittelhochdeutsch der Fall, aber offenbar auch bei RIDGES: Wenn wir versuchen, die Belege mit Hilfe dieses Exporters zu exportieren, erhalten wir eine leere Liste.</li>
+<li>Da er erst in neueren Versionen von ANNIS hinzugekommen ist, ist er bei einigen ANNIS-Instanzen, die sich noch auf ältere Versionen stützen, (noch) nicht verfügbar. So gibt es in der Bochumer ANNIS-Instanz, über die das Referenzkorpus Mittelhochdeutsch verfügbar ist, noch keinen TextColumnExporter.</li>
+</ul>
+<p>Der zweite Nachteil gilt übrigens auch für eine Reihe anderer Exporter, etwa den SimpleTextExporter, der bei RIDGES ebenfalls nur eine leere Liste generiert.</p>
+<p>Wenn wir dennoch eine KWIC-Konkordanz mit zusätzlichen Metadaten exportieren möchten, müssen wir uns daher mit einem Trick behelfen: Wir kombinieren einfach den Output von zwei Exportern, und zwar</p>
+<ul>
+<li>dem CSV-Exporter, der nur das Keyword mit seinen jeweiligen Annotationen exportiert und über den man auch relativ zuverlässig Metadaten exportieren kann;</li>
+<li>dem Grid-Exporter, der auch den Kontext mit ausgibt, bei dem aber nicht ohne weiteres zu erkennen ist, welches Wort das Keyword ist. Auch die Metadaten kann man hier mit ausgeben lassen, aber es ist einfacher, sie über den CSV-Exporter zu exportieren.</li>
+</ul>
+<div id="export-mit-csv--und-grid-exporter" class="section level2">
+<h2><span class="header-section-number">3.1</span> Export mit CSV- und Grid-Exporter</h2>
+<p>Den CSV-Exporter konfigurieren wir so, dass zusätzlich zum Keyword und seinen Annotationen noch die Metadaten für Dokument, Autor/in, Titel, Ort und Zeit (<em>date</em>) angegeben werden. Dafür tragen wir <code>metakeys=doc,author,title,place,date</code> ins <em>parameters</em>-Feld ein, wie in <a href="export.html#fig:csvexpconfig">3.1</a> dargestellt.</p>
+<div class="figure"><span id="fig:csvexpconfig"></span>
+<img src="docs/fig/csv_exporter_config.png" alt="CSV-Exporter in ANNIS" width="80%" height="80%" />
+<p class="caption">
+Fig. 3.1: CSV-Exporter in ANNIS
+</p>
+</div>
+<p>Wir erhalten nun ein Textdokument, das wir in einem Texteditor wie Notepad++ (Windows) oder BBEdit (Mac) öffnen und in eine Excel- oder Calc-Tabelle copy&amp;pasten können. In den meisten Fällen klappt das reibungslos, ohne dass wir über den Textimport-Assistenten nachjustieren müssen; falls der Import doch nicht einwandfrei klappt, können wir uns grundsätzlich an den in <a href="https://empirical-linguistics.github.io/korpus-schnelleinstieg/von-der-fragestellung-zur-konkordanz.html#import-in-ein-tabellenkalkulationsprogramm">diesem</a> Tutorial gegebenen Anleitungen orientieren, nur dass wir es in diesem Fall nicht mit einer komma-, sondern mit einer tabseparierten Datei zu tun haben und das im Textimport-Assistenten entsprechend angeben müssen. <a href="export.html#fig:importexcel">3.2</a> zeigt, wie man die passenden Einstellungen im Textimport-Assistenten vornimmt.</p>
+<div class="figure"><span id="fig:importexcel"></span>
+<img src="docs/fig/csv_export_kopieren.gif" alt="CSV-Export in Excel kopieren" width="80%" height="80%" />
+<p class="caption">
+Fig. 3.2: CSV-Export in Excel kopieren
+</p>
+</div>
+<p>Nun haben wir also eine Tabelle, die das Keyword, seine Annotationen und die Metadaten enthält, aber noch keinen Kontext. Der Kontext ist aber in vielen Fällen sehr wichtig - gerade, wenn wir die Konkordanz mit zusätzlichen, manuellen Annotationen ergänzen wollen. Beispielsweise könnte es bei der Untersuchung von Diminutiven spannend sein, zu schauen, was genau diminuiert wird - Bezeichnungen für Menschen, Tiere, Objekte? Und hier brauchen wir den Kontext, um zu sehen, ob bspw. <em>Weibchen</em> sich auf ein weibliches Tier oder auf eine Frau bezieht. Im Gegenwartsdeutschen wäre die letztere Lesart zwar nicht mehr wirklich denkbar, aber gerade bei historischen Daten kann man sich oft nicht auf die muttersprachliche Intuition verlassen, weshalb der Kontext umso wichtiger ist, um verschiedene mögliche Bedeutungsvarianten zu desambiguieren.</p>
+<p>Hier kommt nun der GridExporter ins Spiel. Da wir in der gerade generierten Tabelle fast alle Informationen, die uns interessieren, schon haben, nur eben nicht den Kontext, konfigurieren wir den GridExporter so, dass er uns nur die normalisierte Transkriptionsebene (“norm”) ausgibt und sonst nichts. Dafür tragen wir, wie in <a href="export.html#fig:gridexportoptions">3.3</a> gezeigt, <code>norm</code> ins “Annotation Keys”-Feld ein und <code>numbers=false</code> ins <em>Parameters</em>-Feld. Letzteres verhindert, dass nach jedem Token Zahlen in eckigen Klammern angegeben werden, deren Funktion an dieser Stelle nicht allzu interessant ist.</p>
+<div class="figure"><span id="fig:gridexportoptions"></span>
+<img src="docs/fig/grid_export_options.png" alt="CSV-Export in Excel kopieren" width="80%" height="80%" />
+<p class="caption">
+Fig. 3.3: CSV-Export in Excel kopieren
+</p>
+</div>
+<p>Nun können wir die Daten aus dem GridExporter wiederum in einem Texteditor wie Notepad++ oder BBEdit öffnen und in die existierende Excel-Tabelle kopieren, wie in <a href="export.html#fig:gridtoexcel">3.4</a> gezeigt. Dafür müssen wir zunächst die leeren Zeilen entfernen, indem wir im Texteditor <code>^\n</code> durch nichts ersetzen. ^ ist ein regulärer Ausdruck, der für den Anfang (hier: Zeilenanfang) steht, während \n für einen Zeilenumbruch steht. Zusammengenommen sucht dieser reguläre Ausdruck also nach Zeilen, in denen ein Zeilenumbruch direkt am Zeilenanfang steht, ergo: nach leeren Zeilen. Auch dies ist in <a href="export.html#fig:gridtoexcel">3.4</a> dargestellt.</p>
+<div class="figure"><span id="fig:gridtoexcel"></span>
+<img src="docs/fig/grid_to_excel.gif" alt="CSV-Export in Excel kopieren" width="80%" height="80%" />
+<p class="caption">
+Fig. 3.4: CSV-Export in Excel kopieren
+</p>
+</div>
+<p>Et voilà, nun haben wir uns eine (halbwegs) schöne KWIC-Tabelle gebastelt, soweit die begrenzten Exportmöglichkeiten von ANNIS dies zulassen.</p>
+<p>Gegenüber anderen KWIC-Tabellen hat das so erstellte Spreadsheet aber den Nachteil, dass das Keyword nicht in einer eigenen Spalte steht und somit nicht ohne weiteres zu erkennen ist. Auch hier können wir uns aber mit einem Trick behelfen, um es wenigstens hervorzuheben.</p>
+</div>
+<div id="keyword-hervorheben-mit-einem-excel-makro" class="section level2">
+<h2><span class="header-section-number">3.2</span> Keyword hervorheben mit einem Excel-Makro</h2>
+<p>Eines vorab: Der folgende Trick funktioniert nur in Microsoft Excel (nicht in LibreOffice Calc) - und auch dort nur, wenn Makros aktiviert sind. Dafür brauchen Sie Administratorrechte, die Sie auf vielen Arbeitsplatz-PCs standardmäßig nicht haben. Unter Windows müssen Sie ggf. zunächst die <a href="https://support.microsoft.com/de-de/office/anzeigen-der-registerkarte-entwicklertools-e1192344-5e56-4d45-931b-e5fd9bea2d45">Office-Entwicklertools</a> aktivieren, bevor Sie mit Makros arbeiten können - mit einer schnellen Internet-Suche können Sie relativ einfach herausfinden, wie genau Sie in Ihrer Office-Version Makros aktivieren können, wenn sie noch nicht aktiviert sind.</p>
+<p>Beachten Sie bitte, dass Makros ein Sicherheitsrisiko darstellen können. Verwenden Sie daher immer nur Makros aus vertrauenswürdigen Quellen oder solche, die Sie selbst aufgezeichnet bzw. programmiert haben!</p>
+<p>Makros kann man auf unterschiedliche Art und Weise erstellen: Auf der einen Seite kann man eine Tätigkeit, die man in einem Office-Programm ausführt, “aufzeichnen”, um sie dann automatisiert immer wieder ausführen zu können. Auf der anderen Seite kann man mit Hilfe der VisualBasic-Programmiersprache (VBA) komplexere Makros programmieren. Letzteres wollen wir nun tun. (Disclaimer: Ich habe wenig Ahnung von VBA und habe Frankenstein-mäßig Codebausteine aus unterschiedlichen Quellen zusammengesetzt, z.B. von <a href="https://www.mrexcel.com/board/threads/conditional-formatting-highlight-only-certain-words-in-cell-text.455752/">hier</a>. Aber hey, es funktioniert!)</p>
+<p>Um ein Makro zu erstellen, das die in der Lemma-Spalte angegebenen Strings in der KWIC-Spalte erkennt und hervorhebt, copy&amp;pasten Sie einfach den folgenden Code in das VBA-Makro-Fenster und führen Sie das Makro aus.</p>
+<pre class="polyglot"><code>
+Sub highlightwords()
+  Dim rCell As Range
+  Dim lPos As Long, lComp As Long, lLngth As Long
+  Dim sCell As String
+  Dim sTxt As String
+ 
+  Const bCase As Boolean = False  &#39;&lt;- True, wenn Groß- und Kleinschreibung beachtet werden soll
+  
+  &#39;Anzahl der Zeilen bestimmen - es ist egal, welche Spalte wir hier nehmen,
+  &#39;solange sie nicht leer ist.
+  k = Cells(Rows.Count, &quot;O&quot;).End(xlUp).Row
+  
+  Application.ScreenUpdating = False
+  lComp = 1 + bCase
+  
+
+  Columns(&quot;C&quot;).Font.ColorIndex = 1
+  For Counter = 1 To k
+  
+  &#39;Wenn das Keyword bei Ihnen in einer anderen Spalte als der dritten steht,
+  &#39;dann setzten Sie bitte hier die passende Zahl ein:
+  
+  Set curCell1 = Worksheets(&quot;Sheet1&quot;).Cells(Counter, 3)
+  
+  &#39;Wenn der KWIC-Text bei Ihnen in einer anderen Spalte als der fünfzehnten steht,
+  &#39;dann setzten Sie bitte hier die passende Zahl ein:
+  Set curCell2 = Worksheets(&quot;Sheet1&quot;).Cells(Counter, 15)
+  sTxt = curCell1.Value
+  lLngth = Len(sTxt)
+  With curCell2
+    .Font.ColorIndex = 1
+    sCell = .Text
+    lPos = InStr(1, sCell, sTxt, lComp)
+      Do Until lPos = 0
+        .Characters(lPos, lLngth).Font.ColorIndex = 5
+        lPos = InStr(lPos + lLngth, sCell, sTxt, lComp)
+      Loop
+    End With
+    Next Counter
+  Application.ScreenUpdating = True
+End Sub
+</code></pre>
+<p>Das Makro sucht Strings aus einer Spalte (hier: der dritten) in einer anderen Spalte (hier: der fünfzehnten) und hebt sie dort hervor. Natürlich können Sie das Makro so anpassen, dass auch andere Spalten als Quell- bzw. Zielspalten dienen und es somit flexibel für Ihre eigenen Zwecke einsetzen, auch solche, die gar nichts mit ANNIS zu tun haben. Im Idealfall sollte das genauso einfach funktionieren wie in <a href="export.html#fig:excelmacros">3.5</a> dargestellt.</p>
+<div class="figure"><span id="fig:excelmacros"></span>
+<img src="docs/fig/excelmacro.gif" alt="CSV-Export in Excel kopieren" width="80%" height="80%" />
+<p class="caption">
+Fig. 3.5: CSV-Export in Excel kopieren
+</p>
+</div>
+<p>Nun haben wir eine KWIC-Konkodranz, mit der wir gut weiterarbeiten können und die wir z.B. mit weiteren Annotationsspalten ergänzen können.</p>
+<p>Das alles ist natürlich nur eine Behelfsmaßnahme: Wer sich mit Programmiersprachen, regulären Ausdrücken usw. auskennt, kann weitaus bessere Ergebnisse auf anderen Wegen effizienter erzielen. Zum Beispiel kann man erfreulicherweise sehr viele der über die diversen ANNIS-Instanzen verfügbaren Korpora auch herunterladen, z.B. über das <a href="www.laudatio-repository.org/">LAUDATIO-Repository</a>, und offline mit den Tools, mit denen man sich auskennt, durchsuchen. Aber denjenigen, die nur einmalig eine kleine Studie auf Grundlage von ANNIS-Exportdateien machen möchten, habe ich hiermit hoffentlich eine halbwegs nützliche Schritt-für-Schritt-Anleitung gegeben, die sich auch ohne tiefergehende Technikkenntnisse umsetzen lässt.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="annis-interface-und-suchabfragesprache.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": null
+}
+});
+});
+</script>
+
+</body>
+
+</html>

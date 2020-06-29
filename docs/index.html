@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg</title>
+  <meta name="description" content="Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg" />
+  
+  
+  
+
+<meta name="author" content="Stefan Hartmann" />
+
+
+<meta name="date" content="2020-06-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="annis-interface-und-suchabfragesprache.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Einführung</a></li>
+<li class="chapter" data-level="2" data-path="annis-interface-und-suchabfragesprache.html"><a href="annis-interface-und-suchabfragesprache.html"><i class="fa fa-check"></i><b>2</b> ANNIS: Interface und Suchabfragesprache</a><ul>
+<li class="chapter" data-level="2.1" data-path="annis-interface-und-suchabfragesprache.html"><a href="annis-interface-und-suchabfragesprache.html#annis-interface"><i class="fa fa-check"></i><b>2.1</b> ANNIS-Interface</a></li>
+<li class="chapter" data-level="2.2" data-path="annis-interface-und-suchabfragesprache.html"><a href="annis-interface-und-suchabfragesprache.html#suchabfragesprache"><i class="fa fa-check"></i><b>2.2</b> Suchabfragesprache</a></li>
+<li class="chapter" data-level="2.3" data-path="annis-interface-und-suchabfragesprache.html"><a href="annis-interface-und-suchabfragesprache.html#beispiel-diminutive-in-ridges"><i class="fa fa-check"></i><b>2.3</b> Beispiel: Diminutive in RIDGES</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="export.html"><a href="export.html"><i class="fa fa-check"></i><b>3</b> Export</a><ul>
+<li class="chapter" data-level="3.1" data-path="export.html"><a href="export.html#export-mit-csv--und-grid-exporter"><i class="fa fa-check"></i><b>3.1</b> Export mit CSV- und Grid-Exporter</a></li>
+<li class="chapter" data-level="3.2" data-path="export.html"><a href="export.html#keyword-hervorheben-mit-einem-excel-makro"><i class="fa fa-check"></i><b>3.2</b> Keyword hervorheben mit einem Excel-Makro</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg</h1>
+<p class="author"><em>Stefan Hartmann</em></p>
+<p class="date"><em>2020-06-29</em></p>
+</div>
+<div id="einfuhrung" class="section level1">
+<h1><span class="header-section-number">1</span> Einführung</h1>
+<p>In diesem kurzen Tutorial zeige ich, wie man in Korpora, die über die Plattform ANNIS verfügbar sind, einfache Korpusrecherchen durchführen kann und wie man die Ergebnisse anschließend in Form einer KWIC-Konkordanz in ein Tabellenkalkulationsprogramm exportieren kann. Dabei liegt der Fokus vor allem auf dem letztgenannten Aspekt, also den Herausforderungen, die der Export mit sich bringt. Für die Suche in ANNIS gibt es nämlich schon eine ganze Reihe hervorragender Tutorials zusätzlich zur sehr ausführlichen und hilfreichen Dokumentation. Beispielsweise gibt es <a href="https://www.linguistik.hu-berlin.de/de/institut/professuren/korpuslinguistik/corpus-tools/annis-tutorials">hier</a> einige Videotutorials und <a href="https://corpus-tools.org/annis/resources/SE_HistorischeKorpora_ANNIS2015-05-06.pdf">hier</a> einen Einstieg am Beispiel des RIDGES-Korpus.</p>
+<p>ANNIS ist ein Such- und Visualisierungstool, das zum einen als Open-Source-Software herunterladbar und auf dem eigenen Rechner verwendbar ist, zum anderen auch über verschiedene öffentliche Instanzen online verwendet werden kann. In diesem Tutorial beschäftigen wir uns nur mit diesem Szenario, also der Nutzung von Online-Schnittstellen.</p>
+<p>Da prinzipiell jede/r, der oder die einen Server zur Verfügung hat, eine eigene öffentliche ANNIS-Instanz starten kann, gibt es mehrere Instanzen, über die unterschiedliche Korpora verfügbar sind. Nennenswerte ANNIS-Instanzen sind:</p>
+<ul>
+<li><p>HU Berlin: Hier finden sich u.a. das Referenzkorpus Altdeutsch (Deutsch Diachron Digital, kurz DDD), das Lernerkorpus FALKO oder auch das RIDGES-Korpus, mit dem wir im folgenden Beispiel arbeiten werden: <a href="https://korpling.german.hu-berlin.de/annis3/" class="uri">https://korpling.german.hu-berlin.de/annis3/</a></p></li>
+<li><p>Georgetown University: Über diese Instanz ist z.B. das Georgetown University Multilayer Corpus (GUM) verfügbar, <a href="https://corpling.uis.georgetown.edu/annis-corpora/" class="uri">https://corpling.uis.georgetown.edu/annis-corpora/</a></p></li>
+<li><p>Über eine Bonner ANNIS-Instanz ist das für die germanistische Sprachgeschichtsforschung sehr wichtige Bonner Frühneuhochdeutschkorpus verfügbar <a href="https://korpora.zim.uni-due.de/FnhdC/" class="uri">https://korpora.zim.uni-due.de/FnhdC/</a></p></li>
+<li><p>Das Referenzkorpus Mittelhochdeutsch ist auf einer Bochumer ANNIS-Instanz zu finden: <a href="https://www.linguistics.rub.de/rem/" class="uri">https://www.linguistics.rub.de/rem/</a></p></li>
+</ul>
+<p>Diese Liste ließe sich noch fortsetzen. Wichtig zu wissen ist, dass die grundlegenden Methoden, die wir im Folgenden kennenlernen werden, sich im Grunde auf alle über ANNIS verfügbaren Korpora übertragen lassen.</p>
+<p>Zu den deutschsprachigen Korpora, die über öffentliche ANNIS-Instanzen verfügbar sind, gehören unter anderem</p>
+<ul>
+<li><a href="https://www.deutschdiachrondigital.de/">das Referenzkorpus Altdeutsch</a></li>
+<li><a href="https://www.linguistics.rub.de/rem/">das Referenzkorpus Mittelhochdeutsch</a></li>
+<li><a href="https://korpora.zim.uni-due.de/FnhdC/">das Bonner Frühneuhochdeutschkorpus</a></li>
+<li><a href="https://www.linguistics.rub.de/ref/">das Referenzkorpus Frühneuhochdeutsch</a></li>
+<li><a href="https://www.linguistik.hu-berlin.de/de/institut/professuren/korpuslinguistik/forschung/ridges-projekt/">das RIDGES-Korpus (“Registers in Diachronic German Science”)</a></li>
+<li><a href="https://www.kiezdeutschkorpus.de/kidko-home-EN.html">das Kiezdeutsch-Korpus (Registrierung erforderlich)</a></li>
+</ul>
+<p>In diesem Tutorial arbeiten wir mit dem RIDGES-Korpus, das, wie viele andere Korpora auch, über <a href="https://korpling.german.hu-berlin.de/annis3/">https://korpling.german.hu-berlin.de/annis3/</a> verfügbar ist.</p>
+<p><img src="docs/fig/by-sa.png" width="30%" height="30%" style="display: block; margin: auto;" /></p>
+<p>Für alle, die lieber schauen statt lesen, gibt eine auch eine Video-Version des Tutorials (die minimal anders ist und außerdem mein allererstes Video, deshalb teilweise etwas holprig). Um es zu sehen, klappen Sie einfach durch Klick auf den Pfeil den entsprechenden Abschnitt aus:</p>
+<details>
+<p><summary>klick mich</summary></p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9pgjeFjj138" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</details>
+<p>Dieses Tutorial wurde mit Hilfe von <a href="https://bookdown.org/" target="_blank">Bookdown</a> für <a href="https://www.r-project.org/" target="_blank">R</a> geschrieben und publiziert. Es ist lizenziert unter CC-BY-SA und kann gerne mit Quellenangabe weitergegeben und adaptiert werden.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="annis-interface-und-suchabfragesprache.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": null
+}
+});
+});
+</script>
+
+</body>
+
+</html>
