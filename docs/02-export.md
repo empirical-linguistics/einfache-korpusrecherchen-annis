@@ -125,8 +125,8 @@ Das Makro sucht Strings aus einer Spalte (hier: der dritten) in einer anderen Sp
 
 
 <div class="figure">
-<img src="docs/fig/excelmacro.gif" alt="CSV-Export in Excel kopieren" width="80%" height="80%" />
-<p class="caption">(\#fig:excelmacros)CSV-Export in Excel kopieren</p>
+<img src="docs/fig/excelmacro.gif" alt="Makro in VBA-Editor kopieren und ausführen" width="80%" height="80%" />
+<p class="caption">(\#fig:excelmacros)Makro in VBA-Editor kopieren und ausführen</p>
 </div>
 
 Nun haben wir eine KWIC-Konkodranz, mit der wir gut weiterarbeiten können und die wir z.B. mit weiteren Annotationsspalten ergänzen können.
