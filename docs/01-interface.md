@@ -71,7 +71,7 @@ Mit 1677 Treffern sind die Ergebnisse nun schon etwas stärker ausgedünnt. Um z
 
 Wir sehen nun eine Liste der häufigsten Lemmas, die ich hier noch einmal angebe:
 
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; "><table>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; "><table>
  <thead>
   <tr>
    <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> lemma </th>

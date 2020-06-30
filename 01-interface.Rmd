@@ -76,7 +76,7 @@ Wir sehen nun eine Liste der häufigsten Lemmas, die ich hier noch einmal angebe
 freq <- read.delim("docs/tables/frequency_analysis.txt", sep = "\t", quote = "")
 colnames(freq) <- c("lemma", "count")
 kableExtra::scroll_box(kableExtra::kable(freq),
-                       height = "200px",
+                       height = "400px",
                        box_css = "border: 1px solid #ddd; padding: 5px; ",
                        extra_css = NULL,
   fixed_thead = TRUE)
