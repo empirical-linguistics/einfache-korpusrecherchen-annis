@@ -10,7 +10,9 @@ date: "2020-06-30"
 
 # Einführung
 
-In diesem kurzen Tutorial zeige ich, wie man in Korpora, die über die Plattform ANNIS verfügbar sind, einfache Korpusrecherchen durchführen kann und wie man die Ergebnisse anschließend in Form einer KWIC-Konkordanz in ein Tabellenkalkulationsprogramm exportieren kann. Dabei liegt der Fokus vor allem auf dem letztgenannten Aspekt, also den Herausforderungen, die der Export mit sich bringt. Für die Suche in ANNIS gibt es nämlich schon eine ganze Reihe hervorragender Tutorials zusätzlich zur sehr ausführlichen und hilfreichen [Dokumentation](https://corpus-tools.org/annis/documentation.html). Beispielsweise gibt es [hier](https://www.linguistik.hu-berlin.de/de/institut/professuren/korpuslinguistik/corpus-tools/annis-tutorials) einige Videotutorials und [hier](https://corpus-tools.org/annis/resources/SE_HistorischeKorpora_ANNIS2015-05-06.pdf) einen Einstieg am Beispiel des RIDGES-Korpus.
+In diesem kurzen Tutorial zeige ich, wie man in Korpora, die über die Plattform ANNIS verfügbar sind, einfache Korpusrecherchen durchführen kann und wie man die Ergebnisse anschließend in Form einer KWIC-Konkordanz in ein Tabellenkalkulationsprogramm exportieren kann. Dabei liegt der Fokus vor allem auf dem letztgenannten Aspekt, also den Herausforderungen, die der Export mit sich bringt. Für die Suche in ANNIS gibt es nämlich schon eine ganze Reihe hervorragender Tutorials zusätzlich zur sehr ausführlichen und hilfreichen [Dokumentation](https://corpus-tools.org/annis/documentation.html). Beispielsweise gibt es [hier](https://www.linguistik.hu-berlin.de/de/institut/professuren/korpuslinguistik/corpus-tools/annis-tutorials) einige Videotutorials und [hier](https://corpus-tools.org/annis/resources/SE_HistorischeKorpora_ANNIS2015-05-06.pdf) einen Einstieg am Beispiel des RIDGES-Korpus. Der Datenexport bereitet jedoch erfahrungsgemäß einigen Nutzer\*innen Probleme, zumal nicht jeder der zahlreichen Exporter, die in ANNIS zur Verfügung stehen, mit jedem Korpus funktioniert. Daher geht es in diesem Tutorial weniger um die Suche in ANNIS an sich als um die Frage, wie man mit Hilfe der zur Verfügung stehenden Exporter Datensätze (Belegsammlungen) exportieren kann, um mit diesen dann weiterarbeiten zu können.
+
+## ANNIS
 
 ANNIS ist ein Such- und Visualisierungstool, das zum einen als Open-Source-Software herunterladbar und auf dem eigenen Rechner verwendbar ist, zum anderen auch über verschiedene öffentliche Instanzen online verwendet werden kann. In diesem Tutorial beschäftigen wir uns nur mit diesem Szenario, also der Nutzung von Online-Schnittstellen.
 
@@ -25,6 +27,8 @@ Da prinzipiell jede/r, der oder die einen Server zur Verfügung hat, eine eigene
 - Das Referenzkorpus Mittelhochdeutsch ist auf einer Bochumer ANNIS-Instanz zu finden: https://www.linguistics.rub.de/rem/
 
 Diese Liste ließe sich noch fortsetzen. Wichtig zu wissen ist, dass die grundlegenden Methoden, die wir im Folgenden kennenlernen werden, sich im Grunde auf alle über ANNIS verfügbaren Korpora übertragen lassen.
+
+## Beispiele für deutschsprachige ANNIS-Korpora
 
 Zu den deutschsprachigen Korpora, die über öffentliche ANNIS-Instanzen verfügbar sind, gehören unter anderem
 

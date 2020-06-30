@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "9EB125A8",
-    "lastKnownWriteTime" : 1593509368,
-    "last_content_update" : 1593509372168,
+    "lastKnownWriteTime" : 1593519307,
+    "last_content_update" : 1593519307627,
     "path" : "~/Dropbox/Privat/Tutorials/ANNIS/index.Rmd",
     "project_path" : "index.Rmd",
     "properties" : {
-        "cursorPosition" : "2,0",
-        "scrollLine" : "0",
+        "cursorPosition" : "32,34",
+        "scrollLine" : "24",
         "tempName" : "Untitled1"
     },
     "read_only" : false,
