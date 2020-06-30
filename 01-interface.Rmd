@@ -19,7 +19,7 @@ In diesem Kapitel werfen wir zunächst einen genaueren Blick auf das ANNIS-Inter
 
 Das ANNIS-Interface besteht aus drei Teilen: Links oben sehen wir die Suchmaske, darunter die Korpusauswahl, rechts sehen wir zunächst eine Seite mit Beispielanfragen und Zugang zur Hilfe, die eine sehr umfangreiche englischsprachige Dokumentation zu ANNIS und seinen Funktionen bietet.
 
-```{r annisinterface, echo = FALSE, out.width = '50%', out.height = '50%', fig.cap="ANNIS-Interface"}
+```{r annisinterface, echo = FALSE, out.width = '80%', out.height = '80%', fig.cap="ANNIS-Interface"}
 knitr::include_graphics("docs/fig/interface_annis.png")
 ```
 

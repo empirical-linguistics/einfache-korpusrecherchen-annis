@@ -18,7 +18,7 @@ In diesem Kapitel werfen wir zunächst einen genaueren Blick auf das ANNIS-Inter
 Das ANNIS-Interface besteht aus drei Teilen: Links oben sehen wir die Suchmaske, darunter die Korpusauswahl, rechts sehen wir zunächst eine Seite mit Beispielanfragen und Zugang zur Hilfe, die eine sehr umfangreiche englischsprachige Dokumentation zu ANNIS und seinen Funktionen bietet.
 
 <div class="figure">
-<img src="docs/fig/interface_annis.png" alt="ANNIS-Interface" width="50%" height="50%" />
+<img src="docs/fig/interface_annis.png" alt="ANNIS-Interface" width="80%" height="80%" />
 <p class="caption">(\#fig:annisinterface)ANNIS-Interface</p>
 </div>
 
