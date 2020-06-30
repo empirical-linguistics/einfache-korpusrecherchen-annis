@@ -1,7 +1,8 @@
 ---
 title: "Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg"
+subtitle: "Ein Tutorial mit Schwerpunkt Datenexport"
 author: "Stefan Hartmann"
-date: "2020-06-29"
+date: "2020-06-30"
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg"
+subtitle: "Ein Tutorial mit Schwerpunkt Datenexport"
 author: "Stefan Hartmann"
 date: "`r Sys.Date()`"
 ---
