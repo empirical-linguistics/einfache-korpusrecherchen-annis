@@ -10,7 +10,11 @@ date: "2022-03-15"
 
 # Frequenzanalyse
 
-Neben den in den vorherigen Kapiteln dargestellten Such- und Exportfunktionen bietet ANNIS auch die bereits in Abschnitt 2 illustrierte Möglichkeit, Frequenzanalysen durchzuführen, also die Suchergebnisse auszuzählen. Bleiben wir bei unserem Beispiel der Diminutive: Angenommen, wir wollen wissen, welche Diminutive wie häufig in welchem Zeitschnitt und in welchem Sprachraum vorkommen. Um das herauszufinden, können wir unter dem Suchfenster auf den Button "More" und dann auf "Frequency Analysis" klicken. 
+Neben den in den vorherigen Kapiteln dargestellten Such- und Exportfunktionen bietet ANNIS auch die bereits in Abschnitt 2 illustrierte Möglichkeit, Frequenzanalysen durchzuführen, also die Suchergebnisse auszuzählen. Bleiben wir bei unserem Beispiel der Diminutive: Angenommen, wir wollen wissen, welche Diminutive wie häufig in welchem Zeitschnitt und in welchem Sprachraum vorkommen. 
+
+## Frequenzanalyse im ANNIS-Online-Interface
+
+Um das herauszufinden, können wir unter dem Suchfenster auf den Button "More" und dann auf "Frequency Analysis" klicken. 
 
 
 <div class="figure">

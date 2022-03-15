@@ -23,6 +23,7 @@ export
 export-mit-csv--und-grid-exporter
 keyword-hervorheben-mit-einem-excel-makro
 frequenzanalyse
+frequenzanalyse-im-annis-online-interface
 ridges-offline-verwenden
 frequenzlisten-kombinieren
 schlusswort

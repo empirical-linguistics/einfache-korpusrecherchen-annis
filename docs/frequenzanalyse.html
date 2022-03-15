@@ -153,9 +153,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="frequenzanalyse.html"><a href="frequenzanalyse.html"><i class="fa fa-check"></i><b>4</b> Frequenzanalyse</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="frequenzanalyse.html"><a href="frequenzanalyse.html#ridges-offline-verwenden"><i class="fa fa-check"></i><b>4.1</b> RIDGES offline verwenden</a></li>
-<li class="chapter" data-level="4.2" data-path="frequenzanalyse.html"><a href="frequenzanalyse.html#frequenzlisten-kombinieren"><i class="fa fa-check"></i><b>4.2</b> Frequenzlisten kombinieren</a></li>
-<li class="chapter" data-level="4.3" data-path="frequenzanalyse.html"><a href="frequenzanalyse.html#schlusswort"><i class="fa fa-check"></i><b>4.3</b> Schlusswort</a></li>
+<li class="chapter" data-level="4.1" data-path="frequenzanalyse.html"><a href="frequenzanalyse.html#frequenzanalyse-im-annis-online-interface"><i class="fa fa-check"></i><b>4.1</b> Frequenzanalyse im ANNIS-Online-Interface</a></li>
+<li class="chapter" data-level="4.2" data-path="frequenzanalyse.html"><a href="frequenzanalyse.html#ridges-offline-verwenden"><i class="fa fa-check"></i><b>4.2</b> RIDGES offline verwenden</a></li>
+<li class="chapter" data-level="4.3" data-path="frequenzanalyse.html"><a href="frequenzanalyse.html#frequenzlisten-kombinieren"><i class="fa fa-check"></i><b>4.3</b> Frequenzlisten kombinieren</a></li>
+<li class="chapter" data-level="4.4" data-path="frequenzanalyse.html"><a href="frequenzanalyse.html#schlusswort"><i class="fa fa-check"></i><b>4.4</b> Schlusswort</a></li>
 </ul></li>
 </ul>
 
@@ -176,7 +177,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="frequenzanalyse" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Frequenzanalyse</h1>
-<p>Neben den in den vorherigen Kapiteln dargestellten Such- und Exportfunktionen bietet ANNIS auch die bereits in Abschnitt 2 illustrierte Möglichkeit, Frequenzanalysen durchzuführen, also die Suchergebnisse auszuzählen. Bleiben wir bei unserem Beispiel der Diminutive: Angenommen, wir wollen wissen, welche Diminutive wie häufig in welchem Zeitschnitt und in welchem Sprachraum vorkommen. Um das herauszufinden, können wir unter dem Suchfenster auf den Button “More” und dann auf “Frequency Analysis” klicken.</p>
+<p>Neben den in den vorherigen Kapiteln dargestellten Such- und Exportfunktionen bietet ANNIS auch die bereits in Abschnitt 2 illustrierte Möglichkeit, Frequenzanalysen durchzuführen, also die Suchergebnisse auszuzählen. Bleiben wir bei unserem Beispiel der Diminutive: Angenommen, wir wollen wissen, welche Diminutive wie häufig in welchem Zeitschnitt und in welchem Sprachraum vorkommen.</p>
+<div id="frequenzanalyse-im-annis-online-interface" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Frequenzanalyse im ANNIS-Online-Interface</h2>
+<p>Um das herauszufinden, können wir unter dem Suchfenster auf den Button “More” und dann auf “Frequency Analysis” klicken.</p>
 <div class="figure"><span style="display:block;" id="fig:freqanal"></span>
 <img src="docs/fig/freqanal.png" alt="Frequenzanalyse-Button unter dem Suchfenster" width="80%" height="80%" />
 <p class="caption">
@@ -224,8 +228,9 @@ Fig. 4.6: Suchanfrage für die Grundgesamtheiten in jeder Kombination aus Jahr u
 </p>
 </div>
 <p>Da dabei sehr große Datenmengen verarbeitet werden, ist diese Anfrage leider zu aufwendig, um sie über die Server-Version von ANNIS durchzuführen (es kommt regelmäßig zu Timeouts), aber glücklicherweise gibt es die Möglichkeit, sowohl ANNIS als auch das RIDGES-Korpus herunterzuladen und sich so in nur wenigen Minuten in die Lage zu versetzen, das Korpus offline zu nutzen. Wenn Sie diesen Weg gehen wollen, lesen Sie den nächsten Abschnitt - ansonsten können Sie auch mit der von mir generierten Frequenzliste <a href="https://github.com/empirical-linguistics/einfache-korpusrecherchen-annis/blob/master/docs/tables/frequency_year.txt">hier</a> arbeiten und den Abschnitt überspringen.</p>
-<div id="ridges-offline-verwenden" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> RIDGES offline verwenden</h2>
+</div>
+<div id="ridges-offline-verwenden" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> RIDGES offline verwenden</h2>
 <p>Um die ANNIS-Version von Ridges offline zu verwenden, müssen Sie zunächst <a href="https://corpus-tools.org/annis/">hier</a> ANNIS herunterladen. Anschließend laden Sie über das Repositorium <a href="https://www.laudatio-repository.org/browse/corpus/PySSCnMB7CArCQ9CNKFY/corpora">LAUDATIO</a> die ANNIS-Version von Ridges herunter. Bitte beachten Sie, dass Sie die heruntergeladene zip-Datei entpacken müssen - sie enthält wiederum mehrere Zip-Dateien, die jeweils eine RIDGES-Version enthalten, deren aktuellste die Version 9.0 ist. Diese müssen Sie nicht entpacken. Vielmehr können Sie die heruntergeladene Desktop-Version von ANNIS öffnen und mit Klick auf “Administration” oben links ins Administrationsinterface gelangen, wo Sie auf den Button “Upload ZIP file with relANNIS corpus and start import” klicken können. Dann wählen Sie den zip-Ordner Annis_9-0.zip im eben heruntergeladenen und entpackten Ridges-Ordner aus. Der Import dauert nun einige Minuten. Dann können wir die Frequenzanalyse erneut durchführen; wenn Sie die neueste Version von ANNIS heruntergeladen haben, müssen Sie die Frequenzanlayse, wie oben bereits angedeutet, ein wenig anpassen, weil nach Metadaten in der aktuellen Version einfach im gleichen Fenster gefiltert wird wie nach Annotationen; <strong>wichtig</strong>: die Suche nach dem Metadatum “date” muss außerdem direkt in der Suchanfrage erfolgen, d.h. die Suchanfrage muss lauten <code>lemma=/.*/ @*date</code>. (<code>@*</code> ist in der aktuellen ANNIS-Version der neue Operator zur Suche nach Metadaten; in vorherigen Versionen war das <code>meta::</code>.)</p>
 <div class="figure"><span style="display:block;" id="fig:fullfreqanal2"></span>
 <img src="docs/fig/fullfreqanal2.png" alt="Suchanfrage für die Grundgesamtheiten in jeder Kombination aus Jahr und Sprachraum im neuen Frequenzanalyse-Interface" width="80%" height="80%" />
@@ -235,8 +240,8 @@ Fig. 4.7: Suchanfrage für die Grundgesamtheiten in jeder Kombination aus Jahr u
 </div>
 <p>Et voilà, die Frequenzen sind da und können nun auch heruntergeladen werden.</p>
 </div>
-<div id="frequenzlisten-kombinieren" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Frequenzlisten kombinieren</h2>
+<div id="frequenzlisten-kombinieren" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Frequenzlisten kombinieren</h2>
 <p>Die Frequenzlisten zu kombinieren, ist leider in Tabellenkalkulationsprogrammen wie Excel nicht ohne weiteres möglich (obwohl es dafür Optionen zu geben scheint). Hier zeige ich, wie man das Ganze relativ einfach im Programm <a href="https://www.r-project.org/">R</a> machen kann:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="frequenzanalyse.html#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;docs/tables/frequency_year.txt&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote =</span> <span class="st">&quot;&quot;</span>)</span>
 <span id="cb2-2"><a href="frequenzanalyse.html#cb2-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;docs/tables/frequency.txt&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote =</span> <span class="st">&quot;&quot;</span>)</span>
@@ -19314,8 +19319,8 @@ md
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="frequenzanalyse.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(both, <span class="st">&quot;both.csv&quot;</span>)</span></code></pre></div>
 <p>Man erhält dann eine CSV-Datei, die man wiederum in Excel importieren kann. Näheres zum Import in Tabellenkalkulationsprogramme finden Sie in <a href="https://empirical-linguistics.github.io/ems/datenaufbereitung/index.html">diesem Tutorial</a>, einen (relativ) schnellen Einstieg in R bietet <a href="https://hartmast.github.io/sprachgeschichte/begleitmaterial/07-Schnelleinstieg%20in%20R.pdf">dieses Tutorial</a>.</p>
 </div>
-<div id="schlusswort" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Schlusswort</h2>
+<div id="schlusswort" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Schlusswort</h2>
 <p>Zusammenfassend lässt sich also sagen, dass ANNIS ein sehr mächtiges Tool ist, das sich insbesondere für das Durchsuchen von Korpora mit Mehrebenenannotation eignet. Es ist jedoch keineswegs eine “Catch-all”-Lösung für sämtliche korpuslinguistischen Anforderungen – das kann und will es auch gar nicht sein. Wer wirklich eingehende quantitative Analysen vornehmen möchte, wird daher nicht umhinkommen, sich etwas tiefer auch mit anderen Tools zu beschäftigen. Wie dieses Tutorial gezeigt hat, ist auch die ständige Weiterentwicklung von ANNIS Segen und Fluch zugleich – einerseits ist es sehr zu begrüßen, dass das Tool im Gegensatz zu vielen anderen nicht-kommerziellen Korpustools ständig weiterentwickelt und modernisiert wird; andererseits kann es gerade für Anfänger*innen etwas abschreckend sein, mit einem dynamisch sich entwickelnden Tool zu arbeiten, bei dem Tutorials wie dieses schnell veraltet sind und sich teilweise auch Inkompatibilitäten in den Suchanfragen verschiedener Versionen ergeben (ich nenne das den Python2/Python3-Effekt). Das ist keinswegs als Kritik an ANNIS zu verstehen, weil es für solche Änderungen ja immer gute Gründe gibt. Als Nutzer*innen überfordert uns so etwas manchmal – vielleicht auch wegen eines Phänomens, das der Kolumnist Sascha Lobo einmal sehr treffend als <a href="https://www.spiegel.de/netzwelt/netzpolitik/digitalisierungsdrama-in-deutschland-hauptsache-es-funktioniert-fuer-mich-kolumne-a-679a1db0-d295-46ab-ad7f-fd7191d4efa9">“Funktionierfetisch”</a> beschrieben hat. Gerade in der Korpuslinguistik müssen wir uns von diesem “Funktionierfetisch” ein Stückweit verabschieden und uns auch klarmachen, dass es – unter anderem aufgrund der doch recht unterschiedlichen Herangehensweisen, die unterschiedliche Fragestellungen erfordern – nicht das eine Tool für alles gibt, sondern wir uns im Zweifelsfall auch in eine ganze Reihe digitaler Werkzeuge einarbeiten müssen, um unsere Forschungsfragen adäquat beantworten zu können.</p>
 
 </div>
