@@ -2,7 +2,7 @@
 title: "Einfache Korpusrecherchen in ANNIS: Ein Schnelleinstieg"
 subtitle: "Ein Tutorial mit Schwerpunkt Datenexport"
 author: "Stefan Hartmann"
-date: "2020-06-30"
+date: "2022-03-15"
 ---
 
 
@@ -1974,6 +1974,8 @@ Wir sehen nun eine Liste der häufigsten Lemmas, die ich hier noch einmal angebe
 </tbody>
 </table></div>
 
+
+Im vierten Kapitel werden wir noch einmal ausführlicher auf die Frequenzanalyse eingehen und darauf, wie man sich Frequenzlisten nach verschiedenen Annotationen und Metadaten hin ausgeben lassen kann.
 
 Es zeigt sich, dass noch immer einige Fehltreffer zu verzeichnen sind, z.B. *keuchen*, *erbrechen*, *Eiche* bzw. *Eichen* und *Zeichen*. Bei den weniger frequenten finden sich sicherlich noch einige Fehltreffer mehr, aber wir wollen zunächst einmal einfach die genannten, relativ tokenfrequenten Fehltreffer ausschließen, um auf diesem Weg möglichst viele Fehltreffer auf einmal loszuwerden - alle weiteren können wir bei Bedarf später noch aussortieren.
 

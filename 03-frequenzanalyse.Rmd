@@ -62,7 +62,7 @@ Auch hier können wir wieder auf More > Frequency Analysis gehen. Beachten Sie, 
 knitr::include_graphics("docs/fig/fullfreqanal.png")
 ```
 
-Da dabei sehr große Datenmengen verarbeitet werden, ist diese Anfrage leider zu aufwendig, um sie über die Server-Version von ANNIS durchzuführen (es kommt regelmäßig zu Timeouts), aber glücklicherweise gibt es die Möglichkeit, sowohl ANNIS als auch das RIDGES-Korpus herunterzuladen und sich so in nur wenigen Minuten in die Lage zu versetzen, das Korpus offline zu nutzen. Wenn Sie diesen Weg gehen wollen, lesen Sie den nächsten Abschnitt - ansonsten können Sie auch mit der von mir generierten Frequenzliste arbeiten und den Abschnitt überspringen.
+Da dabei sehr große Datenmengen verarbeitet werden, ist diese Anfrage leider zu aufwendig, um sie über die Server-Version von ANNIS durchzuführen (es kommt regelmäßig zu Timeouts), aber glücklicherweise gibt es die Möglichkeit, sowohl ANNIS als auch das RIDGES-Korpus herunterzuladen und sich so in nur wenigen Minuten in die Lage zu versetzen, das Korpus offline zu nutzen. Wenn Sie diesen Weg gehen wollen, lesen Sie den nächsten Abschnitt - ansonsten können Sie auch mit der von mir generierten Frequenzliste [hier](https://github.com/empirical-linguistics/einfache-korpusrecherchen-annis/blob/master/docs/tables/frequency_year.txt) arbeiten und den Abschnitt überspringen.
 
 
 ## RIDGES offline verwenden
@@ -73,9 +73,57 @@ Um die ANNIS-Version von Ridges offline zu verwenden, müssen Sie zunächst [hie
 knitr::include_graphics("docs/fig/fullfreqanal2.png")
 ```
 
-Et voilà, die Frequenzen sind da und können nun auch heruntergeladen werden:
+Et voilà, die Frequenzen sind da und können nun auch heruntergeladen werden.
 
 
+## Frequenzlisten kombinieren
+
+Die Frequenzlisten zu kombinieren, ist leider in Tabellenkalkulationsprogrammen wie Excel nicht ohne weiteres möglich (obwohl es dafür Optionen zu geben scheint). Hier zeige ich, wie man das Ganze relativ einfach im Programm [R](https://www.r-project.org/) machen kann:
+
+```{r, message = FALSE}
+
+a <- read.csv("docs/tables/frequency_year.txt", sep = "\t", quote = "")
+b <- read.csv("docs/tables/frequency.txt", sep = "\t", quote = "")
+both <- merge(a, b, by.y = "meta.date", by.x = "X.2.date")
+head(both, 10)
+
+```
+
+Wie wir sehen, haben wir jetzt eine Tabelle, in der die Gesamtfrequenzen und die Frequenzen der Diminutive kombiniert sind, sodass wir z.B. auch die relative Frequenz pro Million Wörtern ausrechnen können:
+
+```{r, message = FALSE}
+
+# relative Frequenz
+both$rel <- (both$count.y / both$count.x) * 1e6 #1e6 = 1x10 hoch 6 = 1 Million
+
+# absteigend nach relativer Frequenz sortieren
+both <- both[order(both$rel, decreasing = T),]
 
 
-Zusammenfassend lässt sich also sagen, dass ANNIS ein sehr mächtiges Tool ist, das sich insbesondere für das Durchsuchen von Korpora mit Mehrebenenannotation eignet. Es ist jedoch keineswegs eine "Catch-all"-Lösung für sämtliche korpuslinguistischen Anforderungen -- das kann und will es auch gar nicht sein. Wer wirklich eingehende quantitative Analysen vornehmen möchte, wird daher nicht umhinkommen, sich etwas tiefer auch mit anderen Tools zu beschäftigen. Wie dieses Tutorial gezeigt hat, ist auch die ständige Weiterentwicklung von ANNIS Segen und Fluch zugleich -- einerseits ist es sehr zu begrüßen, dass das Tool im Gegensatz zu vielen anderen nicht-kommerziellen Korpustools ständig weiterentwickelt und modernisiert wird; andererseits kann es gerade für Anfänger*innen etwas abschreckend sein, mit einem dynamisch sich entwickelnden Tool zu arbeiten, bei dem Tutorials wie dieses schnell veraltet sind und sich teilweise auch Inkompatibilitäten in den Suchanfragen verschiedener Versionen ergeben (ich nenne das den Python2/Python3-Effekt). 
+```
+
+```{r, echo = FALSE}
+
+# ausgeben
+kableExtra::scroll_box(kableExtra::kable(both),
+                       height = "400px",
+                       box_css = "border: 1px solid #ddd; padding: 5px; ",
+                       extra_css = NULL,
+  fixed_thead = TRUE)
+
+```
+
+Wenn man nicht in R weiterarbeiten möchte (z.B. weil man nicht allzu vertraut damit ist), kann man das Ganze auch exportieren, z.B. mit
+
+```{r, eval = FALSE}
+
+write.csv(both, "both.csv")
+
+```
+
+Man erhält dann eine CSV-Datei, die man wiederum in Excel importieren kann. Näheres zum Import in Tabellenkalkulationsprogramme finden Sie in [diesem Tutorial](https://empirical-linguistics.github.io/ems/datenaufbereitung/index.html), einen (relativ) schnellen Einstieg in R bietet [dieses Tutorial](https://hartmast.github.io/sprachgeschichte/begleitmaterial/07-Schnelleinstieg%20in%20R.pdf).
+
+
+## Schlusswort
+
+Zusammenfassend lässt sich also sagen, dass ANNIS ein sehr mächtiges Tool ist, das sich insbesondere für das Durchsuchen von Korpora mit Mehrebenenannotation eignet. Es ist jedoch keineswegs eine "Catch-all"-Lösung für sämtliche korpuslinguistischen Anforderungen -- das kann und will es auch gar nicht sein. Wer wirklich eingehende quantitative Analysen vornehmen möchte, wird daher nicht umhinkommen, sich etwas tiefer auch mit anderen Tools zu beschäftigen. Wie dieses Tutorial gezeigt hat, ist auch die ständige Weiterentwicklung von ANNIS Segen und Fluch zugleich -- einerseits ist es sehr zu begrüßen, dass das Tool im Gegensatz zu vielen anderen nicht-kommerziellen Korpustools ständig weiterentwickelt und modernisiert wird; andererseits kann es gerade für Anfänger\*innen etwas abschreckend sein, mit einem dynamisch sich entwickelnden Tool zu arbeiten, bei dem Tutorials wie dieses schnell veraltet sind und sich teilweise auch Inkompatibilitäten in den Suchanfragen verschiedener Versionen ergeben (ich nenne das den Python2/Python3-Effekt). Das ist keinswegs als Kritik an ANNIS zu verstehen, weil es für solche Änderungen ja immer gute Gründe gibt. Als Nutzer\*innen überfordert uns so etwas manchmal -- vielleicht auch wegen eines Phänomens, das der Kolumnist Sascha Lobo einmal sehr treffend als ["Funktionierfetisch"](https://www.spiegel.de/netzwelt/netzpolitik/digitalisierungsdrama-in-deutschland-hauptsache-es-funktioniert-fuer-mich-kolumne-a-679a1db0-d295-46ab-ad7f-fd7191d4efa9) beschrieben hat. Gerade in der Korpuslinguistik müssen wir uns von diesem "Funktionierfetisch" ein Stückweit verabschieden und uns auch klarmachen, dass es -- unter anderem aufgrund der doch recht unterschiedlichen Herangehensweisen, die unterschiedliche Fragestellungen erfordern -- nicht das eine Tool für alles gibt, sondern wir uns im Zweifelsfall auch in eine ganze Reihe digitaler Werkzeuge einarbeiten müssen, um unsere Forschungsfragen adäquat beantworten zu können.
