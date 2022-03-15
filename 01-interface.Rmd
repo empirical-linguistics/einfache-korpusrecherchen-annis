@@ -84,6 +84,8 @@ kableExtra::scroll_box(kableExtra::kable(freq),
 ```
 
 
+Im vierten Kapitel werden wir noch einmal ausführlicher auf die Frequenzanalyse eingehen und darauf, wie man sich Frequenzlisten nach verschiedenen Annotationen und Metadaten hin ausgeben lassen kann.
+
 Es zeigt sich, dass noch immer einige Fehltreffer zu verzeichnen sind, z.B. *keuchen*, *erbrechen*, *Eiche* bzw. *Eichen* und *Zeichen*. Bei den weniger frequenten finden sich sicherlich noch einige Fehltreffer mehr, aber wir wollen zunächst einmal einfach die genannten, relativ tokenfrequenten Fehltreffer ausschließen, um auf diesem Weg möglichst viele Fehltreffer auf einmal loszuwerden - alle weiteren können wir bei Bedarf später noch aussortieren.
 
 Wir modifizieren die Suchanfrage daher wie folgt:
